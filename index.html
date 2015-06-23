@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Catalin Voineag</title>
+  <script src="vendor/angular.min.js"></script>
+  <script src="vendor/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/MainController.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+	<header id="head">
+      <a href="#home" id="logo">
+        <h1>Voineag Catalin</h1>
+        <h2>Web Developer</h2>
+      </a>
+      <nav>
+        <ul ng-init="selected=1">
+          <li><a href="#home" class="selected" ng:click="selected=1" ng:class="{'selected' : selected==1}">Portfolio</a></li>
+          <li><a href="#about" ng:click="selected=2" ng:class="{'selected' : selected==2}">About</a></li>
+          <li><a href="#contact" ng:click="selected=3" ng:class="{'selected' : selected==3}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <div id="wrapper">
+		<div ng-view></div>
+  </div>
+	  <footer id="foot">
+        <a href="https://twitter.com/cata94v"><img class="twitter" src="img/twitter-wrap.png" alt="Twitter Logo" class="social-icon"></a>
+        <p>&copy; 2015 Catalin Voineag.</p>
+        <br>
+      </footer>
+  
+</body>
+</html>
