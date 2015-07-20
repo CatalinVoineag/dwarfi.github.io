@@ -177,7 +177,9 @@ PAGE: PORTFOLIO
 }
 
 #skills {
-  padding-bottom: 30px
+  padding-bottom: 30px;
+  float:left;
+  clear:both;
 }
 
 #skills h2,h3 {
